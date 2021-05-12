@@ -25,8 +25,16 @@ utils.opt('o', 'updatetime', 300)
 -- Don't pass messages to the completion menu
 vim.cmd [[set shortmess+=c]]
 
+-- Enable mouse support
+-- vim.cmd [[set mouse=a]]
+
+-- Set GUI font (for Neovide)
+vim.cmd [[set guifont=Your\ Font\ Name:h15]]
+
 -- Highlight on yank
 vim.cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'
 
--- Enable inlay hints
-vim.api.nvim_command('au CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *.rs lua require"lsp_extensions".inlay_hints {prefix=" ", highlight="Comment", enabled={"TypeHint","ChainingHint", "ParameterHint"}}')
+-- Use custom colorscheme
+vim.cmd [[set termguicolors]]
+vim.cmd [[set background="dark"]]
+vim.cmd [[colo gruvbox]]

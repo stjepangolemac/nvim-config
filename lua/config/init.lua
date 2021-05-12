@@ -1,3 +1,6 @@
 require('config.telescope')
 require('config.completion')
 require('config.tree')
+require('config.rust-tools')
+require('config.treesitter')
+require('config.gitsigns')
